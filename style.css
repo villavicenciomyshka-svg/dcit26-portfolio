@@ -26,6 +26,7 @@ body {
 }
 
 
+/*NAVIGATION BAR*/
 .navbar {
     background-color: var (--brown) !important;
     border-bottom: 1px solid #e5e5e5;
@@ -53,6 +54,7 @@ body {
 }
 
 
+/*WELCOME PAGE/HOME*/
 .welcome {
     padding: 110px 0;
     background-color: #f7f7f5;
@@ -85,10 +87,6 @@ body {
 }
 
 
-/* =========================================
-   BUTTON
-========================================= */
-
 .btn-primary {
     background-color: #252525;
     border-color: #252525;
@@ -103,7 +101,127 @@ body {
     transform: translateY(-2px);
 }
 
+/* =========================================
+   PAGE HEADER
+========================================= */
 
+.page-header {
+    padding: 80px 0 50px;
+    background-color: var(--cream);
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.page-header p.lead {
+    color: var(--muted);
+}
+
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   QUIZ SECTION
+========================================= */
+
+.quiz-section {
+    padding: 70px 0;
+    background-color: var(--white);
+}
+
+.quiz-section h2 {
+    font-size: 1.5rem;
+}
+
+
+
+/* =========================================
+   QUIZ CARD
+========================================= */
+
+.quiz-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+    margin-bottom: 15px;
+
+    background-color: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-number {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--brown);
+}
+
+.quiz-card h3 {
+    margin: 5px 0;
+    font-size: 1.15rem;
+    color: var(--text);
+}
+
+.quiz-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   QUIZ RESULT
+========================================= */
+
+.quiz-result {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.quiz-result strong {
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.completed {
+    color: #526653;
+    background-color: #E4EBE2;
+}
 
 
 
