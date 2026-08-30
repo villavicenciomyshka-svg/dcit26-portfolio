@@ -9,10 +9,11 @@
 
     --text: #292522;
     --muted: #756B65;
-
     --border: #DED6CF;
 }
 
+
+/* Base */
 
 * {
     box-sizing: border-box;
@@ -20,10 +21,15 @@
 
 body {
     margin: 0;
+
     font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
     background-color: var(--cream);
     color: var(--text);
 }
+
+
+/* Layout */
 
 .site-wrapper {
     min-height: 100vh;
@@ -34,7 +40,8 @@ body {
     padding: 40px 20px 0;
 }
 
-.site-card {
+.site-card,
+.contact-card {
     width: 100%;
     max-width: 1200px;
 
@@ -44,18 +51,16 @@ body {
 
     border-radius: 20px;
 
-    overflow: hidden;
-
     box-shadow:
         0 15px 50px rgba(58, 41, 33, 0.08);
 }
 
-/*NAVIGATION BAR*/
-.navbar {
-    background-color: var(--brown) !important;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 18px 0;
+.site-card {
+    overflow: hidden;
 }
+
+
+/* Navigation */
 
 .navbar {
     padding: 25px 40px;
@@ -67,13 +72,15 @@ body {
 
 .navbar-brand {
     color: var(--espresso);
+
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
 .nav-link {
-    color: var(--muted);
     margin-left: 20px;
+
+    color: var(--muted);
 
     transition: color 0.2s ease;
 }
@@ -84,24 +91,24 @@ body {
 }
 
 
-/*WELCOME PAGE/HOME*/
+/* Home */
+
 .welcome {
     padding: 100px 60px;
+
     background-color: #f7f7f5;
 }
 
 .welcome h1 {
+    margin-bottom: 25px;
+
     color: var(--espresso);
 
     font-size: clamp(2.5rem, 5vw, 4.2rem);
-
     font-weight: 700;
 
     line-height: 1.05;
-
     letter-spacing: -2px;
-
-    margin-bottom: 25px;
 }
 
 .welcome .lead {
@@ -112,62 +119,319 @@ body {
     line-height: 1.8;
 }
 
-.intro-text {
+.intro-text,
+.quiz-label,
+.contact-label {
     color: var(--brown);
 
-    font-size: 0.85rem;
-
+    font-size: 0.75rem;
     font-weight: 600;
 
     text-transform: uppercase;
-
     letter-spacing: 1.5px;
 }
 
-
-
 .profile-image {
-    width: 230px;
-    height: 230px;
+    width: 240px;
+    height: 240px;
+
     object-fit: cover;
+
+    border: 8px solid var(--cream);
     border-radius: 50%;
-    border: 6px solid #ffffff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 10px 30px rgba(58, 41, 33, 0.12);
 }
 
 
+/* Buttons */
+
 .btn-primary {
+    padding: 12px 24px;
+
     background-color: #252525;
     border-color: #252525;
-    padding: 12px 24px;
+
     border-radius: 8px;
+
     transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: #000000;
-    border-color: #000000;
+    background-color: #000;
+    border-color: #000;
+
     transform: translateY(-2px);
 }
 
-/* =========================================
-   PAGE HEADER AND FOOTER
-========================================= */
+
+/* Page Header */
 
 .page-header {
     padding: 80px 0 50px;
+
     background-color: var(--cream);
 }
 
 .page-header h1 {
+    margin: 0;
+
+    color: var(--espresso);
+
     font-size: 3.5rem;
     font-weight: 700;
+
     letter-spacing: -1.5px;
 }
 
-.page-header p.lead {
-    color: var(--muted);
+
+/* Statistics */
+
+.statistics {
+    padding: 30px 20px 60px;
 }
+
+.stat-card {
+    padding: 30px 20px;
+
+    background-color: var(--cream);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.stat-label {
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+}
+
+.stat-card h2 {
+    margin: 0;
+
+    color: var(--espresso);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* Assessment Sections */
+
+.quiz-section,
+.exam-section,
+.laboratory-section {
+    padding: 20px 20px 90px;
+}
+
+
+/* Assessment Cards */
+
+.assessment-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(58, 41, 33, 0.06);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.assessment-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(58, 41, 33, 0.10);
+}
+
+.assessment-image {
+    width: 100%;
+    height: 200px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.assessment-card-body {
+    padding: 25px;
+}
+
+.assessment-number {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--brown);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+}
+
+.assessment-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--espresso);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.assessment-date {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+.assessment-result {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+}
+
+.assessment-result strong {
+    color: var(--espresso);
+}
+
+
+/* Status */
+
+.status {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status.completed {
+    color: #526653;
+    background-color: #E4EBE2;
+}
+
+.status.missed {
+    color: #8A5145;
+    background-color: #F1E2DE;
+}
+
+
+/* Contact */
+
+.contact-card {
+    margin-top: 25px;
+
+    padding: 55px 60px;
+}
+
+.contact-header {
+    margin-bottom: 35px;
+}
+
+.contact-header h2 {
+    margin-bottom: 10px;
+
+    color: var(--espresso);
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-header > p:last-child {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background-color: var(--cream);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(58, 41, 33, 0.08);
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: var(--espresso);
+    color: var(--white);
+
+    border-radius: 10px;
+
+    font-size: 1.1rem;
+}
+
+.contact-title {
+    margin-bottom: 3px;
+
+    color: var(--espresso);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.contact-detail {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -183,108 +447,3 @@ footer {
 
     font-size: 0.85rem;
 }
-
-/* =========================================
-   STAT LABEL
-========================================= */
-
-.stat-label {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: var(--muted);
-    margin-bottom: 8px;
-}
-
-
-/* =========================================
-   QUIZ SECTION
-========================================= */
-
-.quiz-section {
-    padding: 80px 0;
-    background-color: var(--white);
-}
-
-.quiz-section h2 {
-    font-size: 1.5rem;
-}
-
-
-
-/* =========================================
-   QUIZ CARD
-========================================= */
-
-.quiz-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 25px;
-    margin-bottom: 15px;
-
-    background-color: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
-}
-
-.quiz-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.quiz-number {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    color: var(--brown);
-}
-
-.quiz-card h3 {
-    margin: 5px 0;
-    font-size: 1.15rem;
-    color: var(--text);
-}
-
-.quiz-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-
-/* =========================================
-   QUIZ RESULT
-========================================= */
-
-.quiz-result {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.quiz-result strong {
-    font-size: 1.1rem;
-}
-
-
-/* =========================================
-   STATUS
-========================================= */
-
-.status {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.status.completed {
-    color: #526653;
-    background-color: #E4EBE2;
-}
-
-
-
