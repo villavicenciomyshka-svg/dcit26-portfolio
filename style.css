@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --navy: #0B1F3A;
+    --navy: #000342;
+    --blue: #06266F;
     --indigo: #373A8C;
-    --sky: #7DB9E8;
+    --sky: #18BFE0;
 
-    --background: #0B1F3A;
     --white: #FFFFFF;
     --surface: #F8FAFD;
 
@@ -28,13 +28,20 @@ body {
 
     font-family: "DM Sans", sans-serif;
 
-    background: linear-gradient(
-    to bottom,
-    var(--navy) 0%,
-    var(--indigo) 70%,
-    var(--sky) 100%
-);
-
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 130, 220, 0.35),
+            rgba(40, 210, 235, 0.65)
+        ),
+        linear-gradient(
+            to bottom,
+            var(--navy) 0%,
+            var(--blue) 30%,
+            #0B5AA0 65%,
+            var(--sky) 100%
+        );
+    
     color: var(--text);
 }
 
@@ -82,8 +89,6 @@ body {
 
 .navbar-brand {
     color: var(--navy);
-
-    font-family: "Cormorant Garamond", serif;
 
     font-weight: 500;
     letter-spacing: -0.5px;
@@ -273,11 +278,8 @@ body {
 
 .assessment-image {
     width: 100%;
-    height: 200px;
-
+    height: auto;
     display: block;
-
-    object-fit: cover;
 }
 
 .assessment-card-body {
