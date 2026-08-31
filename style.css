@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-    --espresso: #3A2A22;
-    --dark-brown: #5A4033;
-    --brown: #8B7568;
-    --beige: #D8C7B8;
+    --navy: #0B1F3A;
+    --indigo: #373A8C;
+    --sky: #7DB9E8;
 
-    --cream: #F5F0EA;
-    --white: #FCFAF7;
+    --background: #0B1F3A;
+    --white: #FFFFFF;
+    --surface: #F8FAFD;
 
-    --text: #292522;
-    --muted: #756B65;
-    --border: #DED6CF;
+    --text: #172033;
+    --muted: #667085;
+    --border: #D9E1EC;
+
+    --accent: #5267B8;
 }
 
 
@@ -22,9 +26,15 @@
 body {
     margin: 0;
 
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-family: "DM Sans", sans-serif;
 
-    background-color: var(--cream);
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--indigo),
+        var(--sky)
+    );
+
     color: var(--text);
 }
 
@@ -47,12 +57,12 @@ body {
 
     margin: 0 auto;
 
-    background-color: var(--white);
+    background-color: var(--surface);
 
     border-radius: 20px;
 
     box-shadow:
-        0 15px 50px rgba(58, 41, 33, 0.08);
+    0 15px 50px rgba(11, 31, 58, 0.08);
 }
 
 .site-card {
@@ -65,13 +75,13 @@ body {
 .navbar {
     padding: 25px 40px;
 
-    background-color: var(--white) !important;
+    background-color: var(--surface) !important;
 
     border-bottom: 1px solid var(--border);
 }
 
 .navbar-brand {
-    color: var(--espresso);
+    color: var(--navy);
 
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -87,7 +97,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--espresso);
+    color: var(--navy);
 }
 
 
@@ -96,13 +106,15 @@ body {
 .welcome {
     padding: 100px 60px;
 
-    background-color: #f7f7f5;
+    background-color: var(--surface);
 }
 
 .welcome h1 {
     margin-bottom: 25px;
 
-    color: var(--espresso);
+    color: var(--navy);
+
+    font-family: "Cormorant Garamond", serif;
 
     font-size: clamp(2.5rem, 5vw, 4.2rem);
     font-weight: 700;
@@ -122,7 +134,7 @@ body {
 .intro-text,
 .quiz-label,
 .contact-label {
-    color: var(--brown);
+    color: var(--accent);
 
     font-size: 0.75rem;
     font-weight: 600;
@@ -137,10 +149,10 @@ body {
     height: auto;
 
     border-radius: 12px;
-    border: 8px solid var(--cream);
+    border: 8px solid var(--surface);
 
     box-shadow:
-        0 10px 30px rgba(58, 41, 33, 0.12);
+    0 15px 35px rgba(11, 31, 58, 0.10);
 }
 
 /* Buttons */
@@ -169,14 +181,15 @@ body {
 .page-header {
     padding: 80px 0 50px;
 
-    background-color: var(--cream);
+    background-color: var(--surface);
 }
 
 .page-header h1 {
     margin: 0;
 
-    color: var(--espresso);
+    color: var(--navy);
 
+    font-family: "Cormorant Garamond", serif;
     font-size: 3.5rem;
     font-weight: 700;
 
@@ -193,7 +206,7 @@ body {
 .stat-card {
     padding: 30px 20px;
 
-    background-color: var(--cream);
+    background-color: #EEF4FB;
 
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -212,7 +225,9 @@ body {
 .stat-card h2 {
     margin: 0;
 
-    color: var(--espresso);
+    color: var(--navy);
+
+    font-family: "Cormorant Garamond", serif;
 
     font-size: 2.5rem;
     font-weight: 700;
@@ -241,7 +256,7 @@ body {
     border-radius: 14px;
 
     box-shadow:
-        0 8px 25px rgba(58, 41, 33, 0.06);
+    0 8px 25px rgba(11, 31, 58, 0.06);
 
     transition: transform 0.2s ease,
                 box-shadow 0.2s ease;
@@ -251,7 +266,7 @@ body {
     transform: translateY(-5px);
 
     box-shadow:
-        0 15px 35px rgba(58, 41, 33, 0.10);
+    0 15px 35px rgba(11, 31, 58, 0.10);
 }
 
 .assessment-image {
@@ -272,7 +287,7 @@ body {
 
     margin-bottom: 8px;
 
-    color: var(--brown);
+    color: var(--accent);
 
     font-size: 0.7rem;
     font-weight: 600;
@@ -283,7 +298,7 @@ body {
 .assessment-card h3 {
     margin-bottom: 8px;
 
-    color: var(--espresso);
+    color: var(--navy);
 
     font-size: 1.2rem;
     font-weight: 600;
@@ -309,7 +324,7 @@ body {
 }
 
 .assessment-result strong {
-    color: var(--espresso);
+    color: var(--navy);
 }
 
 
@@ -350,7 +365,9 @@ body {
 .contact-header h2 {
     margin-bottom: 10px;
 
-    color: var(--espresso);
+    color: var(--navy);
+
+    font-family: "Cormorant Garamond", serif;
 
     font-size: 2rem;
     font-weight: 700;
@@ -374,7 +391,7 @@ body {
 
     padding: 20px;
 
-    background-color: var(--cream);
+    background-color: var(--surface);
 
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -387,7 +404,7 @@ body {
     transform: translateY(-3px);
 
     box-shadow:
-        0 8px 25px rgba(58, 41, 33, 0.08);
+    0 15px 50px rgba(11, 31, 58, 0.08);
 }
 
 .contact-icon {
@@ -400,7 +417,7 @@ body {
 
     flex-shrink: 0;
 
-    background-color: var(--espresso);
+    background-color: var(--navy);
     color: var(--white);
 
     border-radius: 10px;
@@ -411,7 +428,7 @@ body {
 .contact-title {
     margin-bottom: 3px;
 
-    color: var(--espresso);
+    color: var(--navy);
 
     font-size: 0.8rem;
     font-weight: 600;
