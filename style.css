@@ -29,11 +29,11 @@ body {
     font-family: "DM Sans", sans-serif;
 
     background: linear-gradient(
-        135deg,
-        var(--navy),
-        var(--indigo),
-        var(--sky)
-    );
+    to bottom,
+    var(--navy) 0%,
+    var(--indigo) 70%,
+    var(--sky) 100%
+);
 
     color: var(--text);
 }
@@ -83,7 +83,9 @@ body {
 .navbar-brand {
     color: var(--navy);
 
-    font-weight: 700;
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 500;
     letter-spacing: -0.5px;
 }
 
@@ -458,7 +460,7 @@ footer {
 
     text-align: center;
 
-    color: var(--muted);
+    color: var(--surface);
 
     font-size: 0.85rem;
 }
