@@ -347,32 +347,22 @@ body {
 /* Student Info and Contact */
 
 .student-info {
+    margin-top: 25px;
     display: flex;
-    justify-content: center;
-    gap: 80px;
-    padding: 40px 0 30px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 35px;
-}
-
-.student-info div {
-    text-align: center;
-}
-
-.student-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--muted);
+    gap: 35px;
+    flex-wrap: wrap;
 }
 
 .student-info p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--navy);
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
+.student-info strong {
+    color: var(--navy);
+    font-weight: 700;
+}
 .contact-card {
     margin-top: 25px;
 
